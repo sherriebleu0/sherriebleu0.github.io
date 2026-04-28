@@ -48,12 +48,21 @@ z-index:1000;
 left:0;
 }
 
-.sidebar h2{
+/* Logo */
+.logo-box{
 text-align:center;
-color:#dcb6ff;
 margin-bottom:30px;
 }
 
+.logo-box img{
+width:140px;
+height:140px;
+object-fit:contain;
+border-radius:20px;
+box-shadow:0 0 20px rgba(255,255,255,0.15);
+}
+
+/* Links */
 .sidebar a{
 display:block;
 color:white;
@@ -84,11 +93,13 @@ font-size:24px;
 }
 </style>
 </head>
+
 <body>
 
 <div class="menu-btn" onclick="toggleMenu()">✦</div>
 
 <div class="sidebar" id="sidebar">
+
 <div class="logo-box">
 <img src="./logo.png" alt="Logo Sherrie Bleu">
 </div>
@@ -99,6 +110,7 @@ font-size:24px;
 <a href="#">Dibujos</a>
 <a href="#">Blog</a>
 <a href="#">Contacto</a>
+
 </div>
 
 <div class="main">
@@ -112,5 +124,7 @@ document.getElementById("sidebar").classList.toggle("active");
 }
 </script>
 
+</body>
+</html>
 </body>
 </html>
