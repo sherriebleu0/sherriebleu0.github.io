@@ -14,24 +14,44 @@ background-size:cover;
 background-position:center;
 background-attachment:fixed;
 color:white;
+overflow-x:hidden;
+}
+
+/* Botón estrella */
+.menu-btn{
+position:fixed;
+top:20px;
+left:20px;
+font-size:32px;
+cursor:pointer;
+z-index:1001;
+background:rgba(0,0,0,0.4);
+padding:10px 14px;
+border-radius:50%;
 }
 
 /* Barra lateral */
 .sidebar{
 position:fixed;
-left:0;
 top:0;
-width:220px;
+left:-260px;
+width:240px;
 height:100%;
-background:rgba(20,20,40,0.85);
-padding-top:40px;
-box-shadow:2px 0 10px rgba(0,0,0,0.5);
+background:rgba(20,20,40,0.92);
+padding-top:80px;
+transition:0.4s;
+box-shadow:2px 0 15px rgba(0,0,0,0.6);
+z-index:1000;
+}
+
+.sidebar.active{
+left:0;
 }
 
 .sidebar h2{
 text-align:center;
-color:#b98cff;
-margin-bottom:40px;
+color:#dcb6ff;
+margin-bottom:30px;
 }
 
 .sidebar a{
@@ -48,27 +68,27 @@ transition:0.3s;
 background:#7b4cff;
 }
 
-/* Zona principal */
+/* Contenido */
 .main{
-margin-left:240px;
-padding:60px;
 text-align:center;
+padding:100px 30px;
 }
 
 .main h1{
 font-size:60px;
-color:#d4b3ff;
+color:#e6c8ff;
 }
 
 .main p{
 font-size:24px;
 }
 </style>
-
 </head>
 <body>
 
-<div class="sidebar">
+<div class="menu-btn" onclick="toggleMenu()">✦</div>
+
+<div class="sidebar" id="sidebar">
 <h2>Sherrie Bleu</h2>
 
 <a href="#">Sobre mí</a>
@@ -83,6 +103,12 @@ font-size:24px;
 <h1>Sherrie Bleu Site</h1>
 <p>Bienvenid@ a mi universo creativo ✨</p>
 </div>
+
+<script>
+function toggleMenu(){
+document.getElementById("sidebar").classList.toggle("active");
+}
+</script>
 
 </body>
 </html>
