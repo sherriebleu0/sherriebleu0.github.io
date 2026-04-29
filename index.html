@@ -17,7 +17,7 @@ color:white;
 overflow-x:hidden;
 }
 
-/* Botón */
+/* Botón menú */
 .menu-btn{
 position:fixed;
 top:20px;
@@ -105,6 +105,50 @@ margin:0 auto;
 line-height:1.6;
 opacity:0.9;
 }
+
+/* Subtítulo */
+.section-title{
+margin-top:50px;
+color:#cfa6ff;
+font-size:28px;
+}
+
+/* GRID */
+.grid{
+display:flex;
+justify-content:center;
+flex-wrap:wrap;
+gap:20px;
+margin-top:30px;
+}
+
+/* TARJETAS */
+.card{
+width:180px;
+background:rgba(0,0,0,0.4);
+border-radius:15px;
+overflow:hidden;
+transition:0.3s;
+box-shadow:0 10px 20px rgba(0,0,0,0.4);
+cursor:pointer;
+}
+
+.card img{
+width:100%;
+height:140px;
+object-fit:cover;
+}
+
+.card p{
+margin:10px;
+font-weight:bold;
+}
+
+/* Hover */
+.card:hover{
+transform:translateY(-8px) scale(1.05);
+box-shadow:0 15px 25px rgba(0,0,0,0.6);
+}
 </style>
 </head>
 
@@ -137,36 +181,38 @@ opacity:0.9;
 ¡Bienvenid@!<br>
 Este es mi espacio creativo donde comparto mis historias, personajes, dibujos y todo lo que me inspira ✨
 </p>
+
 <h2 class="section-title">✦ Explora mi universo ✦</h2>
 
 <div class="grid">
 
 <div class="card">
-<img src="historia.jpg" alt="Historias">
+<img src="https://via.placeholder.com/300x200">
 <p>Historias</p>
 </div>
 
 <div class="card">
-<img src="personajes.jpg" alt="Personajes">
+<img src="https://via.placeholder.com/300x200">
 <p>Personajes</p>
 </div>
 
 <div class="card">
-<img src="dibujos.jpg" alt="Dibujos">
+<img src="https://via.placeholder.com/300x200">
 <p>Dibujos</p>
 </div>
 
 <div class="card">
-<img src="blog.jpg" alt="Blog">
+<img src="https://via.placeholder.com/300x200">
 <p>Blog</p>
 </div>
 
 <div class="card">
-<img src="contacto.jpg" alt="Contacto">
+<img src="https://via.placeholder.com/300x200">
 <p>Contacto</p>
 </div>
 
 </div>
+
 </div>
 
 <script>
