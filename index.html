@@ -8,7 +8,7 @@
 <style>
 body{
 margin:0;
-font-family:Arial, sans-serif;
+font-family:'Segoe UI', sans-serif;
 background-image:url("./fondo-estrellas.png");
 background-size:cover;
 background-position:center;
@@ -17,12 +17,12 @@ color:white;
 overflow-x:hidden;
 }
 
-/* Botón estrella */
+/* Botón */
 .menu-btn{
 position:fixed;
 top:20px;
 left:20px;
-font-size:32px;
+font-size:28px;
 cursor:pointer;
 z-index:1001;
 background:rgba(0,0,0,0.4);
@@ -30,14 +30,14 @@ padding:10px 14px;
 border-radius:50%;
 }
 
-/* Barra lateral */
+/* Sidebar */
 .sidebar{
 position:fixed;
 top:0;
 left:-260px;
 width:240px;
 height:100%;
-background:rgba(20,20,40,0.92);
+background:rgba(20,20,40,0.95);
 padding-top:80px;
 transition:0.4s;
 box-shadow:2px 0 15px rgba(0,0,0,0.6);
@@ -55,9 +55,7 @@ margin-bottom:30px;
 }
 
 .logo-box img{
-width:140px;
-height:140px;
-object-fit:contain;
+width:130px;
 border-radius:20px;
 box-shadow:0 0 20px rgba(255,255,255,0.15);
 }
@@ -77,19 +75,35 @@ transition:0.3s;
 background:#7b4cff;
 }
 
-/* Contenido principal */
+/* MAIN */
 .main{
 text-align:center;
-padding:100px 30px;
+padding:100px 20px;
 }
 
-.main h1{
+/* Título */
+.title{
 font-size:60px;
-color:#e6c8ff;
+color:#d8b6ff;
+margin-bottom:10px;
+text-shadow:0 0 15px rgba(200,150,255,0.4);
 }
 
-.main p{
-font-size:24px;
+/* Línea decorativa */
+.divider{
+width:250px;
+height:2px;
+background:linear-gradient(to right, transparent, #b57fff, transparent);
+margin:20px auto;
+}
+
+/* Texto */
+.welcome{
+font-size:22px;
+max-width:600px;
+margin:0 auto;
+line-height:1.6;
+opacity:0.9;
 }
 </style>
 </head>
@@ -114,8 +128,16 @@ font-size:24px;
 </div>
 
 <div class="main">
-<h1>Sherrie Bleu Site</h1>
-<p>Bienvenid@ a mi universo creativo ✨</p>
+
+<h1 class="title">Sherrie Bleu Site</h1>
+
+<div class="divider"></div>
+
+<p class="welcome">
+¡Bienvenid@!<br>
+Este es mi espacio creativo donde comparto mis historias, personajes, dibujos y todo lo que me inspira ✨
+</p>
+
 </div>
 
 <script>
