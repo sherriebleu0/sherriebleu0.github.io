@@ -1,0 +1,320 @@
+@font-face {
+  font-family: 'NirmalaB';
+  src: url('../fonts/NirmalaB.ttf') format('truetype');
+  font-weight: bold;
+  font-style: normal;
+}
+
+/* BARRA SCROLL */
+::-webkit-scrollbar {
+  width: 10px;
+}
+::-webkit-scrollbar-track {
+  background: #141437;
+}
+::-webkit-scrollbar-thumb {
+  background: #785AC3;
+  border-radius: 10px;
+}
+::-webkit-scrollbar-thumb:hover {
+  background: #cfa6ff ;
+}
+
+body{
+  margin:0px;
+  font-family:'NirmalaB', sans-serif;
+  background-image:url("../img/fondo-estrellas.png");
+  background-size:cover;
+  background-position:center;
+  background-attachment:fixed;
+  overflow-x:hidden;
+}
+
+#scale-container-content {
+  position: absolute;
+  transform-origin: top left;
+  z-index: 50;
+}
+
+#scale-container-menu {
+  position: fixed;
+  transform-origin: top left;
+  z-index: 100;
+}
+
+/* BOTÓN MENÚ */
+.menu-btn {
+  height: 100px;
+  width: 100px;
+  top: 70px;
+  left: 70px;
+  position: absolute;
+  cursor: pointer;
+  z-index: 101;
+  border-radius: 50%;
+  background: #785AC3;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  transition: 0.4s;
+  z-index: 101;
+}
+.menu-btn svg{
+  height: 80px;
+  width: 80px;
+  fill: #141437;
+  transition: 0.4s;
+}
+.menu-btn:hover{
+  transform: rotate(360deg);
+  height: 120px;
+  width: 120px;
+  top: 60px;
+  left: 60px
+}
+
+/* BARRA LATERAL */
+.sidebar{
+  position: absolute;
+  top: 0;
+  left: -4000px;
+  width: 400px;
+  height: 1080px;
+  background: #141437;
+  padding-top: 80px;
+  transition: 0.4s ease;
+  box-shadow: 2px 0 15px rgba(0,0,0,0.6);
+  z-index: 103;
+}
+.sidebar::before {
+  content: "";
+  position: absolute;
+  top: 15px;
+  left: 15px;
+  right: 15px;
+  bottom: 15px;
+  border: 2px solid #cfa6ff;
+  border-radius: 15px;
+  pointer-events: none;
+}
+.sidebar.active{
+  left:0;
+}
+.close-sidebar{
+  opacity: 0;
+  visibility: hidden;
+  height: 2000px;
+  width: 3000px;
+  position: absolute;
+  transform-origin: top left;
+  backdrop-filter: blur(7px);
+  z-index: 102;
+  -webkit-backdrop-filter: blur(7px);
+  transition: opacity 0.4s ease, visibility 0s linear 0.4s;
+  pointer-events: none;
+}
+.close-sidebar.active{
+  opacity: 1;
+  visibility: visible;
+  pointer-events: auto;
+  transition: opacity 1.5s ease, visibility 0s;
+}
+
+/* Logo */
+.logo-box{
+  text-align:center;
+  margin-bottom:30px;
+}
+
+.logo-box img{
+  width:220px;
+  /*border-radius:20px;
+  box-shadow:0 0 20px rgba(255,255,255,0.15);*/
+}
+
+/* Links menú */
+.sidebars a{
+  display:block;
+  color:white;
+  text-decoration:none;
+  padding:15px 25px;
+  margin:10px;
+  border-radius:10px;
+  transition:0.3s;
+}
+
+.text-box{
+  height: 65px;
+  width: 300px;
+  border-radius: 10px;
+  margin-left: 50px;
+  margin-bottom: 15px;
+  transition: 0.3s;
+}
+.text-box:hover{
+  background-color: #282850;
+}
+
+.icon{
+  margin-left: 15px;
+  margin-top: 17px;
+  width: 30px;
+  fill: #cfa6ff;
+}
+
+.text-box a{
+  position: absolute;
+  margin-top: 20px;
+  margin-left: 20px;
+  font-weight: bold;
+  font-family: 'NirmalaB', sans-serif;
+  color: white;
+  font-size: 16px;
+  align-self: center;
+}
+
+.sidebars a:hover{
+  background: #cfa6ff;
+}
+
+/* MAIN */
+.main{
+  margin: 20px;
+  text-align: center;
+}
+
+/* TITULO */
+.title{
+  height: 175px;
+}
+/* BIENVENIDA */
+.welcome{
+  margin-top: 40px;
+  font-weight: bold;
+  font-family: 'NirmalaB', sans-serif;
+  color: white;
+  font-size: 35px;
+}
+.description{
+  margin-top: 10px;
+  font-weight: bold;
+  font-family: 'NirmalaB', sans-serif;
+  color: white;
+  font-size: 20px;
+  max-width: 700px;
+  justify-self: center;
+}
+/* ESTRELLA DECORATIVA */
+.star{
+  margin-top: 40px;
+  width: 45px;
+  fill: #cfa6ff;
+}
+/* Subtítulo */
+.section-title{
+  margin-top: 40px;
+  color: #cfa6ff;
+  font-size: 28px;
+}
+
+/* TARJETAS */
+.grid{
+  margin-top: 40px;
+  width: 1920px;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap: 50px;
+}
+.card-wrapper {
+  position: relative;
+  display: inline-block;
+  z-index: 1;
+}
+.card{ 
+  position: relative;
+  width: 275px;
+  height: 450px;
+  background: rgba(0,0,0,0.4);
+  border-radius: 25px;
+  overflow: hidden;
+  transition: 0.3s ease;
+  box-shadow: 0 10px 20px rgba(0,0,0,0.4);
+  cursor: pointer;
+  z-index: 110;
+}
+.card img{
+  width: 275px;
+  height: 450px;
+  object-fit: cover;
+}
+.blur{
+  width: 275px;
+  height: 450px;
+  position: relative;
+  bottom: 130px;
+  background: rgba(40,55,90,0.85);
+  backdrop-filter: blur(7px);
+  -webkit-backdrop-filter: blur(7px);
+  transition: 0.3s ease;
+}
+.blur p{
+  position: relative;
+  top: 20px;
+  font-weight: bold;
+  font-family:'NirmalaB', sans-serif;
+  color: white;
+  font-size: 35px;
+  transition: 0.3s ease;
+}
+
+/* ANIMACION TARJETAS */
+.card:hover{
+  transform: translateY(-8px) scale(1.05);
+  box-shadow: 0 10px 20px rgba(120,90,195,0.8);
+}
+.card:hover .blur{
+  transform: translateY(-360px);
+}
+.card:hover .blur p{
+  transform: translateY(170px);
+}
+
+/* estrellas */
+.stars {
+  position: absolute;
+  width: 40px;
+  fill: #cfa6ff;
+  pointer-events: none;
+  opacity: 1;
+  filter: drop-shadow(0 0 6px #cfa6ff);
+}
+
+/* PIE DE PAGINA */
+.footer {
+  position: relative;
+  height: 510px;
+  top: 40px;
+  background-color: #141437;
+}
+
+.social-box {
+  border-bottom: 1px solid #ccc;
+  border-top: 1px solid #ccc;
+  margin: 0 auto 30px;
+  width: 80%;
+  display:flex;
+  justify-content:center;
+  flex-wrap:wrap;
+  gap: 25px;
+}
+
+.social-icon {
+  width: 100px;
+  fill: #785AC3;
+  cursor: pointer;
+  transition: 0.3s ease;
+}
+.social-icon:hover {
+  fill: #cfa6ff;
+}
