@@ -381,3 +381,46 @@ body{
   transition: 0.3s ease;
   align-items: center;
 }
+.back-main {
+  display: block;
+  height: 100px;
+  width: 100px;
+  top: 15px;
+  position: relative;
+  cursor: pointer;
+  border-radius: 50%;
+  background: #785AC3;
+  transition: 0.4s ease;
+  margin: auto;
+}
+.back-main:hover {
+  width: 300px;
+  border-radius: 50px;
+  transition: 0.4s ease;
+}
+.back-main-icon {
+  height: 80px;
+  width: 80px;
+  fill: #141437;
+  opacity: 1;
+  transition: 0.4s ease;
+}
+.back-main:hover .back-main-icon {
+  opacity: 0;
+}
+.back-main-text {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  white-space: nowrap;
+  font-weight: bold;
+  font-family: 'NirmalaB', sans-serif;
+  color: white;
+  font-size: 30px;
+  opacity: 0;
+  transition: 0.4s ease;
+}
+.back-main:hover .back-main-text {
+  opacity: 1;
+}
