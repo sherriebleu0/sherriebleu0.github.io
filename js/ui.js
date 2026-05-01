@@ -87,9 +87,7 @@ document.querySelectorAll(".card-wrapper").forEach(wrapper => {
       }
     }, 120);
   });
-
   card.addEventListener("mouseleave", () => {
     clearInterval(interval);
-    // ❗ no hacemos nada más → dejamos que terminen solas
   });
 });
